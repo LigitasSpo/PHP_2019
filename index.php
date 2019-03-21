@@ -1,68 +1,6 @@
 <?php
 
-//logical operators
 
-/*
-$num = 110;
-
-
-if($num > 1 && $num <= 100) {
-   echo 'number is fine';
-} else {
-    echo 'number must to be between 1 and 100';
-}
-
-$name = 'ligitas';
-$age = 25;
-
-if( $name == 'ligitas' && ( $age == '21' || $age == '25')) {
-    echo 'hello there';
-} else {
-    echo 'go away.';
-}
-*/
-
-//Switches
-/*
-$num = 10;
-
-switch ($num) {
-
-    case 10:
-
-    echo'Ten';
-
-    break;
-
-    case 9:
-
-    echo'Nine';
-
-    break;
-    case 8:
-
-    echo'Eight';
-
-    break;
-
-    default:
-    echo 'number not recognized';
-    
-    break;
-}
-
-
-$name = "arnas";
-switch ($name) {
-    case 'ligitas':
-    case 'Tomas':
-    echo 'Hello there' . $name;
-    break;
-    default: 
-    echo 'go away' . $name;
-    break;
-}
-*/
 
 // arrays
 
