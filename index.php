@@ -1,177 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <form action='index.php' method='POST'>
+    <p> your name <textarea name='text'> </textarea></p> 
+    <input type='submit' value='submit'/>
+    </form>
+</body>
+</html>
 <?php
 
-
-
-// arrays
-
-/*
-$names = array('Ligitas'=> 21,'Tadas' => 50,'Tomas' => 100 );
-$names['Josh'] = 18;
-echo $names['Josh'];
-*/
-
-
-// multidimentional arrays
-
-/*
-$names = array(
-    'Ligitas'=> array(
-        'age'=>24,
-        'hair' => 'black',
-        'food' => array('pica','cola')
-    ),
-    'Tadas' =>array(
-        'age'=>82,
-        'hair' => 'white' 
-    ),
-    'Tomas' =>array(
-        'age'=>21,
-        'hair' => 'blond' 
-    )  
-);
-echo $names['Ligitas']['hair'];
-
-*/
-
-//loops
-/*
-$num = 30;
-
-while($num >= 0):
-    echo $num.'<br>';
-    $num--;
-endwhile;
-*/
-
-//do while loop
-/*
-$num = 1;
-
-do {
-    echo 'this <br>';
-    $num++;
-} while ($num <=10)
-*/
-
-//for loops
-
-/*
-for ($num=10; $num >= 1; $num--) {
-    echo $num . '<br>' ;
-}
-*/
-
-//for each
-/*
-$num = 1;
-$names = array(
-    'alex'=>21,
-    'tom'=>16,
-    'bob'=>41
-);
-
-foreach($names as $name =>$value) {
-    if($name != 'alex') {
-        echo $name . ' age is '. $value. '<br>';
-    }
+if (isset($_POST['text'])) {
+    echo nl2br(htmlentities($_POST['text']));
 
 }
-*/
 
-//functions
+// $name_len = strlen('Ligitas');
 
-/*
-function name($name, $age) {
-    return 'my name is ' .$name. 'and my age is '. $age;
-}
+// echo "your name has $name_len letters";
 
-function add($num1, $num2) {
-    $result = $num1 + $num2;
-    return $result;
-}
 
-$returnValue = name('billy', '10');
+// $input = $_GET['name'];
+// $max_len = 5;
 
-echo $returnValue;
+// if (strlen($input) > $max_len) {
+//     echo 'to long';
 
-echo add(10, 10);
-*/
+// } else {
+//     echo 'good';
+// }
 
-//GET
 
-/*
-$name = $_GET['name'];
-$age = $_GET['age'];
 
-if(isset($name) && isset($age)) {
-    if (!empty($name)&& !empty($age)) {
-        echo 'my name is ' .$name . ' and my age is ' .$age;
-    } else {
-        echo 'Pleas type something';
-    }
-}
-*/
-/*
-$login = 'login';
-$password = 'password';
+// $name = 'Ligitas Spondzevicius';
 
-if(isset($_POST['login']) && isset($_POST['password'])) {
-    if( !empty(($_POST['login'])) && !empty(($_POST['password']))) {
-        if( $_POST['login'] == $login && $_POST['password'] == $password) {
-            echo 'Your logged in';
-        } else {
-            echo 'Loggin or password incorect, pleas try again';
-        }
-    } else {
-        echo 'Type something';
-    }
-   
-}
-*/
+// $text = 'If this text is long enought it will trimm end to make it smaller';
 
-/*
-if(isset($_POST['login'])) {
-    $name = $_POST['login'];
-    if(!empty($name)) {
-       $sentence = $name . ' just started to learn PHP';
-    } else {
-        echo 'enter something';
-    }
-}
-*/
-/*
-$name = 'asd';
-
-if(isset($_POST['login'])&& !empty($_POST['login'])) {
-    $name = $_POST['login'];
-}
-
-if($name == 'Ligitas') {
-    echo 'Hello, Ligitas';
-} else {
-    ?>
-
-    <form action="index.php" method="POST">
-Your name <br> <input type="text" name="login"><br>
-<input type="submit" value="submit">
-</form>
-
-<?php
+// if (strlen($text) > 20){
+// echo substr($text, 0, 20 ) . '...';
+// } else {
+// echo $text;
+// }
  
-}
+// echo substr($name, 0, 5);
 
-*/
+// $from_db = '<script> alert("!heelo"); </script>';
+// $sanitised = htmlentities($from_db);
 
-$levels = array(
-    1 => 'Level 1',
-    2 => 'Level 2',
-    3 => 'Level 3'
-);
+// echo $from_db;
 
-foreach($levels as $key => $level) {
-    echo $key . ' is ' . $level. '<br>';
-}
-?>
-
-
+// echo $sanitised;
 
